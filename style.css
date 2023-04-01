@@ -23,7 +23,7 @@ body{
 
 .sidebar{
     grid-area: 1/1/-1/2;
-    background-color: peachpuff;
+    background-color: peachpuff;   
 }
 
 .header{
