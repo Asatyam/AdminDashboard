@@ -24,6 +24,9 @@ body{
 .sidebar{
     grid-area: 1/1/-1/2;
     background-color: peachpuff;   
+
+    display: grid;
+    grid-template-rows: 1fr 4fr 3fr 4fr;
 }
 
 .header{
@@ -33,5 +36,14 @@ body{
 .content{
     grid-area: 2/2/-1/-1;
     background-color:thistle;
+}
+.dashboard{
+    background-color: rgb(203,140,175)
+}
+.nav{
+    background-color: rgb(184,190,210);
+}
+.settings{
+    background-color: aquamarine;
 }
 
