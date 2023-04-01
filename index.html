@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -61,19 +64,30 @@
         </div>
         <div class="header">
             <div class="search">
-                <div class="search-icon"><img src="./icons/magnify.svg"></div>
+                <div class="icon search-icon"><img src="./icons/magnify.svg"></div>
                 <div class="search-bar">
                     <input type="search" id="search" name="search">
                 </div>
-                <div class="notification-icon">
+                <div class="icon notification-icon">
                     <img src="./icons/bell.svg" alt="bell-icon">
                 </div>
-                <div class="user-profile">
+                <div class="icon user-profile">
                     <img src="./icons/user-icon.svg" alt="user-icon">
                 </div>
                 <div class="user-name"><p>Morgan Oakley</p></div>
             </div>
-            <div class="user-info"></div>
+            <div class="user-info">
+                <div class="icon user-avatar"><img src="./icons/user-icon.svg" alt="user-icon"></div>
+                <div class="greeting">
+                    <p>Hi there,</p>
+                    <p>Morgan Oakley(@morgan)</p>
+                </div>
+                <div class="buttons">
+                   <button>New</button>
+                   <button>Upload</button>
+                   <button>Share</button>
+                </div>
+            </div>
         </div>
         <div class="content">
             <div class="cards"></div>
