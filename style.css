@@ -172,7 +172,7 @@ body{
 }
 
 .header {
-    background-color:#ec4899 ;
+    background-color:#34d399 ;
 }
 .content{
     background: #ef32d9;
@@ -262,15 +262,15 @@ input[type=search]{
 .card{
     border: 1px solid peachpuff;
     border-radius: 12px;
-    background-color: #db2777;
+    background-color: #075985;
     box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
 .card>p{
-    color:#fce7f3;
+    color:white;
 }
 
 .card>p:first-of-type{
-    color:#fdf4ff;
+    color:#ecfeff;
     font-size: 1.4rem;
     font-weight: 800;
     margin-bottom:10px;
@@ -294,8 +294,11 @@ input[type=search]{
 .announcement-card{
     border:2px solid black;
     border-radius:4px;
-    background-color:#67e8f9 ;
+    background-color:#134e4a;
     
+}
+.announcement-card p{
+    color:white;
 }
 .announcements p:first-of-type{
     font-size: 1.3rem;
@@ -305,7 +308,7 @@ input[type=search]{
 .trending-card{
     border: 2px solid black;
         border-radius: 4px;
-        background-color: #38bdf8;
+        background-color: #bae6fd;
 }
 
 .ann-content{
@@ -317,6 +320,7 @@ input[type=search]{
 .ann-content p:first-of-type{
     font-size: large;
     font-weight: 900;
+    margin-bottom: 10px;
 }
 
 
