@@ -1,8 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 *{
     margin: 0;
     padding: 0;
-font-family: 'Raleway', sans-serif;
+    font-family: 'Roboto',"Helvetica", sans-serif;
 }
 :root{
     --main-grid: 1fr 5fr;
@@ -13,11 +14,11 @@ html{
 body{
     min-height: 100%;
 }
+
+/*layout*/
 .main{
-    height: 100vh;
+    height: 100%;
     width: 100vw;
-    border:1px solid darkblue;
-    background-color: aqua;
     display: grid;
     grid-template-columns: 220px auto;
     grid-template-rows: var(--main-grid);
@@ -27,25 +28,15 @@ body{
     height: 100%;
     position: relative;
     grid-area: 1/1/-1/2;
-    background-color: peachpuff;
     display: grid;
     grid-template-rows: 100px 200px 120px auto;
     gap: 25px;
 }
-.dashboard {
-
+.dashboard{
     display: flex;
     padding: 20px;
-    font-size: 1.4rem;
-    font-weight: 900;
     gap: 10px;
-    
 }
-
-.settings {
-    margin-top: 20px;
-}
-
 
 .nav ul,
 .settings ul {
@@ -55,6 +46,7 @@ body{
     left: 20px;
     gap: 10px;
 }
+
 .nav ul {
     grid-template-rows: repeat(5, 1fr);
 }
@@ -68,11 +60,123 @@ body{
     display: flex;
     gap: 20px;
 }
+.settings {
+    margin-top: 20px;
+}
+.header {
+    position: relative;
+    grid-area: 1/2/2/2;
 
+    padding: 1em 1.3rem;
+    display: grid;
+    grid-template-rows: 2fr 3fr;
+
+}
+.search {
+    display: grid;
+    grid-template-columns: .5fr 16fr .5fr 1fr 3fr;
+    align-items: center;
+    gap: 15px;
+}
+.user-info {
+    display: grid;
+    grid-template-columns: 1fr 7fr 4fr;
+    gap: 15px;
+    align-items: center;
+}
+.icon>img {
+    width: clamp(20px, 100%, 40px);
+    height: clamp(20px, 100%, 40px);
+}
+.content {
+    padding: 20px;
+    display: grid;
+    grid-area: 2/2/-1/-1;
+
+    grid-template-columns: 2.5fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+
+}
+.projects {
+    grid-area: 1/1/3/2;
+
+    padding: 20px;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: 10px;
+}
+
+.cards {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-rows: 1fr;
+    grid-auto-rows: 1fr;
+
+}
+.card {
+
+    padding: 20px;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.interact {
+    padding-top: 10px;
+    display: flex;
+    gap: 4px;
+    justify-content: flex-end;
+}
+
+.announcements {
+    display: grid;
+    grid-template-rows: auto 1fr;
+
+}
+.announcement-card {
+    padding: 30px;
+
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    flex-direction: column;
+}
+.trending {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: 10px;
+}
+
+.trend-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+}
+.trending-card {
+    padding: 30px;
+
+    display: flex;
+    gap: 25px;
+
+    flex-direction: column;
+}
+/*
+=====================styling=====================================================
+*/
+
+
+.dashboard {
+    font-size: 1.4rem;
+    font-weight: 900; 
+}
 
 .nav-items:hover,
 .settings-items:hover {
-    background-color: #2563eb;
+     
     border-radius: 20px;
 }
 
@@ -86,46 +190,20 @@ body{
     width: 25px;
 } 
 
-.header{
-    position: relative;
-    grid-area: 1/2/2/2;
-    background-color: rgba(230,230,249);
-    padding:1em 1.3rem;
-    display: grid;
-    grid-template-rows: 2fr 3fr;
-    /* box-shadow: 5px -2px 20px   #0ea5e9 ; */
-    
-}
-
-
-.search{
-    display: grid;
-    grid-template-columns: .5fr 16fr .5fr 1fr 3fr;
-    align-items: center;
-    gap:15px;
-}
-
-
 input[type=search]{
     font-size: 1.2rem;
     width: 90%;
     padding:4px 8px;
     border-radius:20px;
-    background-color: rgba(249, 246, 246);
+     
 }
-
 .user-name>p{
     font-size:1.3rem;
     text-align: center;
     font-weight: 700;
 }
 
-.user-info{
-    display: grid;
-    grid-template-columns: 1fr 7fr 4fr;
-    gap:15px;
-    align-items: center;
-}
+
 .buttons{
     display: flex;
     justify-content: space-evenly;
@@ -136,7 +214,6 @@ input[type=search]{
     width:6em;
     padding: 12px 20px;
     border-radius: 20px;
-    background-color: #2563eb;
     font-size:1.2em;
     color:white;
     font-weight: bold;
@@ -157,74 +234,29 @@ input[type=search]{
     font-size:1.3rem;
     font-weight: 800;
 }
-.icon>img{
-    width: clamp(20px, 100%, 40px);
-    height: clamp(20px, 100%, 40px);
-}
-
 
 .content{
-    padding:20px;
-    display: grid;
-    grid-area: 2/2/-1/-1;
-    background-color:#f5d0fe;
-    grid-template-columns: 2.5fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap:20px;
+    position: relative;
+    box-shadow: -2px -2px 10px 1px #2ea5e9;
+}
 
-    position:relative;
-     box-shadow: -2px -2px 10px  1px #2ea5e9; 
-}
-.projects{
-    grid-area: 1/1/3/2;
-    background-color: #8b5cf6;
-    padding: 20px;
-    display: grid;
-    grid-template-rows: auto 1fr;
-    gap:10px;
-}
-.cards{
-    display: grid;
-    gap:30px;
-    grid-template-columns: repeat(auto-fit,minmax(300px, 1fr));
-    grid-template-rows:1fr;
-    grid-auto-rows:1fr;
-    
-}
 .card{
-    border:1px solid peachpuff;
-    background-color: #eff6ff;
-    padding:20px;
-    overflow: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    border: 1px solid peachpuff;
     border-radius: 5px 20px 5px 20px;
-    
 }
+
 
 .card>p:first-of-type{
     font-size: 1.4rem;
     font-weight: 800;
 
 }
-.announcements{
-    background-color:#c4b5fd ;
-}
 
-.trending{
-    background-color:#e879f9;
-}
 .interact>img{
     height: 20px;
     width: 20px;
 }
-.interact{
-    padding-top: 10px;
-    display: flex;
-    gap:4px;
-    justify-content: flex-end;
-}
+
 
 .projects>p{
     font-size:1.3rem;
@@ -232,23 +264,12 @@ input[type=search]{
 }
 
 
-.announcements{
-    display: grid;
-    grid-template-rows:auto 1fr;
-    
-}
+
 .announcements p:first-of-type{
     font-size: 1.3rem;
     font-weight: 900;
 }
-.announcement-card{
-    padding:30px;
-    background-color: white;
-    display: flex;
-    gap:25px;
-    align-items: center;
-    flex-direction: column;
-}
+
 
 .ann-content{
     flex: 1;
@@ -261,32 +282,12 @@ input[type=search]{
     font-weight: 900;
 }
 
-.trending{
-    display: grid;
-    grid-template-rows: auto 1fr;
-    gap:10px;
-}
+
 .trending p:first-of-type {
     font-size: 1.3rem;
     font-weight: 900;
 }
 
-.trending-card {
-    padding: 30px;
-    background-color: white;
-    display: flex;
-    gap: 25px;
-   
-    flex-direction: column;
-}
-
-.trend-content{
-    flex:1;
-    display: flex;
-    justify-content: center;
-    gap:20px;
-    align-items: center;
-}
 .trend-content>img{
     height: 40px;
     width: 40px;
