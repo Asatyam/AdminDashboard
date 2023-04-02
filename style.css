@@ -9,7 +9,7 @@
     --main-grid: 1fr 5fr;
 }
 html{
-    height: 100%;
+    height: 100vh;
 }
 body{
     min-height: 100%;
@@ -137,7 +137,7 @@ body{
 }
 .announcement-card {
     padding: 30px;
-
+    margin-top: 10px;
     display: flex;
     gap: 25px;
     align-items: center;
@@ -167,8 +167,21 @@ body{
 /*
 =====================styling=====================================================
 */
+.sidebar {
+    background-color: #2dd4bf;
+}
 
-
+.header {
+    background-color:#ec4899 ;
+}
+.content{
+    background: #ef32d9;
+        /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #89fffd, #ef32d9);
+        /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #89fffd, #ef32d9);
+        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
 .dashboard {
     font-size: 1.4rem;
     font-weight: 900; 
@@ -218,6 +231,12 @@ input[type=search]{
     color:white;
     font-weight: bold;
     letter-spacing: 1px;
+    background-color:#1d4ed8 ;
+    border:none;
+    transition: 0.1s;
+}
+.buttons>button:hover{
+    background-color:#172554 ;
 }
 .user-avatar{
     justify-self: end;
@@ -242,13 +261,19 @@ input[type=search]{
 
 .card{
     border: 1px solid peachpuff;
-    border-radius: 5px 20px 5px 20px;
+    border-radius: 12px;
+    background-color: #db2777;
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+.card>p{
+    color:#fce7f3;
 }
 
-
 .card>p:first-of-type{
+    color:#fdf4ff;
     font-size: 1.4rem;
     font-weight: 800;
+    margin-bottom:10px;
 
 }
 
@@ -263,13 +288,25 @@ input[type=search]{
     font-weight: bolder;
 }
 
-
-
+.ann-content:last-of-type{
+    border: none;
+}
+.announcement-card{
+    border:2px solid black;
+    border-radius:4px;
+    background-color:#67e8f9 ;
+    
+}
 .announcements p:first-of-type{
     font-size: 1.3rem;
     font-weight: 900;
 }
 
+.trending-card{
+    border: 2px solid black;
+        border-radius: 4px;
+        background-color: #38bdf8;
+}
 
 .ann-content{
     flex: 1;
